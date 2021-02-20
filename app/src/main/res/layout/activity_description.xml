@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bebebe"
+    android:foregroundGravity="center"
+    tools:context=".description">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00cba9"
+        app:title="Dr.TCS"
+        app:titleTextColor="#ffffff"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="348dp"
+        android:layout_height="607dp"
+        app:cardBackgroundColor="#FAF7F7"
+        app:cardCornerRadius="15dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="174dp">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="199dp"
+            android:background="#fa8072"
+            app:srcCompat="@drawable/alert" />
+
+        <TextView
+            android:id="@+id/bp"
+            android:layout_width="334dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="300dp"
+            android:text="You have a normal body health"
+            android:textColor="#00C853"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/chd"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="250dp"
+            android:text="Good Job"
+            android:textColor="#00C853"
+            android:textSize="35dp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

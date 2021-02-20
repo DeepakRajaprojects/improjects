@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        android:outlineAmbientShadowColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="#00cba9"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="Hello"
+        app:titleTextColor="#ffffff"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="369dp"
+        android:layout_height="550dp"
+        android:layout_marginBottom="1dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/timetxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Last Update:"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20sp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/glucoselayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cdcdc1"
+                    android:clickable="true"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/im1"
+                        android:layout_width="96dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/glucose" />
+
+                    <TextView
+                        android:id="@+id/t1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:text="GLUCOSE"
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/glucosetxt"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t1"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text=""
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/glucosetxt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text="mg/dl"
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_toRightOf="@+id/im1"
+                        android:text="Min-60       Avg-140   Max-140+ "
+                        android:textColor="#ffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20sp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/respirationlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cdcdc1"
+                    android:clickable="true"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/im12"
+                        android:layout_width="96dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/respirationrate" />
+
+                    <TextView
+                        android:id="@+id/t12"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:text="RESPIRATION"
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/resptxt"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t12"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text=""
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/resptxt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text="/min"
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_toRightOf="@+id/im12"
+                        android:text="    Avg-12-16   Max-18+ "
+                        android:textColor="#ffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20sp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/oxylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cdcdc1"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/im13"
+                        android:layout_width="96dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/oxygensaturation" />
+
+                    <TextView
+                        android:id="@+id/t13"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:text="OXYGEN SATURATION"
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/oxytxt"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t13"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-9dp"
+                        android:layout_marginRight="28dp"
+                        android:text=""
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/oxytxt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text="%"
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_toRightOf="@+id/im13"
+                        android:text="Min-85-95%     Avg-95-98% "
+                        android:textColor="#ffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20sp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/bplayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cdcdc1"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/im14"
+                        android:layout_width="96dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/bp" />
+
+                    <TextView
+                        android:id="@+id/t14"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:text="BLOOD PRESSURE"
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bptxt"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t14"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text=""
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bptxt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text="mm/Hg"
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_toRightOf="@+id/im14"
+                        android:text="Min-90/60     Avg-120/80   Max-121+/81+ "
+                        android:textColor="#ffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20sp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/heartlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cdcdc1"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/im15"
+                        android:layout_width="96dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/heartrate" />
+
+                    <TextView
+                        android:id="@+id/t15"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:text="HEART RATE"
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/hearttxt"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t15"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text=""
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hearttxt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text="/min"
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_toRightOf="@+id/im15"
+                        android:text="Avg-60-100   Max-101+ "
+                        android:textColor="#ffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20sp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/cholesterollayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#cdcdc1"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/im16"
+                        android:layout_width="96dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:maxHeight="100dp"
+                        android:src="@drawable/cholesteral" />
+
+                    <TextView
+                        android:id="@+id/t16"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:text="CHOLESTERAL"
+                        android:textColor="#ffff"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cholesteroltxt"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t16"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text=""
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cholesteroltxt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-8dp"
+                        android:layout_marginRight="25dp"
+                        android:text="mg/dl"
+                        android:textColor="#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_toRightOf="@+id/im16"
+                        android:text="   Avg-200    Max-201+ "
+                        android:textColor="#ffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

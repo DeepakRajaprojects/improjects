@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "356232909737",
+    "project_id": "inframind-28699",
+    "storage_bucket": "inframind-28699.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356232909737:android:b47501c6880c747c1eeab8",
+        "android_client_info": {
+          "package_name": "com.example.inframind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356232909737-dn88gc478226nbtnrasmdq1s67uj95it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALsWuAYRtTSARuV180rr31a5zabAjdyLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356232909737-dn88gc478226nbtnrasmdq1s67uj95it.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
